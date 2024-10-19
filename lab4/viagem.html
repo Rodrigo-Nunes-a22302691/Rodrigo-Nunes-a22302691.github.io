@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quizz</title>
+</head>
+<body>
+    <header>
+        <h1>Plano de viagem</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="imagens">
+            <p><img src="images/porto1_grande.jpg" alt="Cidade do Porto"> <img src="images/porto2_grande.jpg" alt="Cidade do Porto"> <img src="images/porto3_grande.jpg" alt="Cidade do Porto"></p>
+        </div>
+
+        <section id="Topic">
+            <form method="get" action="https://postman-echo.com/get" id="viagem">
+                <h3>Dados pessoais</h3>
+                <fieldset>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" autocomplete="on" maxlength="14" placeholder="Exemplo: Rodrigo" autofocus required form="quizz">  
+
+                    <label for="apelido">Apelido: </label>
+                    <input type="text" name="apelido" id="apelido" autocomplete="on" maxlength="14" size="18" placeholder="Exemplo: Nunes" required form="quizz">
+
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" autocomplete="on" placeholder="Exemplo: RodrigoNunes@gmail.com" required form="quizz">
+                </fieldset>
+
+                <h3>Viagem</h3>
+
+                <fieldset>
+                    <label for="dataDePartida">Data de partida: </label>
+                    <input type="date" name="dataDePartida" id="dataDePartida" required form="viagem">
+                </fieldset>
+
+                <fieldset>
+                    <label for="dataDeChegada">Data de regresso: </label>
+                    <input type="date" name="dataDeChegada" id="dataDeChegada" required form="viagem">
+                </fieldset>
+
+                <fieldset>
+                    <label for="numeroDePassageiros">Número de passageiros: </label>
+                    <input type="number" name="passageiros" id="numeroDePassageiros" step="1" required form="viagem">
+                </fieldset>
+
+                <fieldset>
+                    <label for="transporte">Meio de transporte favorito: </label>
+                    <input type="text" name="transporte" id="transporte" placeholder="carro, comboio, avião, entre outros" size="28" required form="viagem">
+                </fieldset>
+
+                <fieldset>
+                    <p>Qual o serviço que deseja na sua viagem?</p>
+                    <label for="servico1">Básico</label>
+                    <input type="radio" name="servico" id="servico1" required form="viagem">
+
+                    <label for="servico2">Premium</label>
+                    <input type="radio" name="servico" id="servico2" required form="viagem">
+                </fieldset>
+
+                <fieldset>
+                    <label for="pedidoEspecial">Pedidos especiais: </label>
+                    <input type="text" name="pedidoEspecial" id="pedidoEspecial" form="viagem">
+                </fieldset>
+
+                <fieldset>
+                    <label for="valorGastar">Qual o valor que espera gastar por pessoa e por dia na sua viagem: </label>
+                    <input type="number" name="valorGastar" id="valorGastar" step="1" required form="viagem">
+                </fieldset>
+            </form>
+        </section>
+        <input type="submit" name="submit" value="Enviar" form="viagem">
+    </main>
+
+    <footer>
+        <p>Diw 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@media (max-width: 900px){
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+
+    header { grid-area: header; }
+    nav { grid-area: nav; }
+    main { grid-area: main; }
+    footer { grid-area: footer; }
+
+    body{
+        display: grid;
+
+        width: 100vw;
+        height: 100vh;
+
+        gap: 10px;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 5% 1fr 5%;
+
+        grid-template-areas:
+        'header'
+        'nav'
+        'main'
+        'footer';
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav a{
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+}

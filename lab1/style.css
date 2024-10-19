@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+
+.colunas{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.coluna {
+    background-color: lightgray; 
+    padding: 20px;
+    width: 30%;                
+    text-align: center;          
+    border: 1px solid #ccc;     
+    border-radius: 10px;        
+}
+
+
+.coluna img {
+    width: 100%;               
+    height: auto;              
+    border-radius: 10px;       
+}
+
+
+.coluna p {
+    margin-top: 15px;           
+    color: black;
+}
+
+.centerImage{
+    text-align: center;
+}

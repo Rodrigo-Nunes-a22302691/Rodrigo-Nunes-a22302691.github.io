@@ -1,0 +1,256 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+  }
+  
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  header, article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+
+  #capitais{
+    margin-bottom: 0px;
+  }
+  
+  header {
+    animation-name: slideDown;
+    animation-duration: 1s;
+    background: #4733e1;
+    color: white;
+    position: sticky;
+    z-index: 2;
+    height: 10vh;
+    top: 0;
+    justify-content:space-between;
+  }
+  header a{
+    padding:20px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+  }
+  header a:nth-child(4){
+    padding:20px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 30px;
+    font-size: 30px;
+    margin-right: 15px;
+  }
+  header a:visited{
+    color: rgb(177, 1, 177);
+  }  
+  header a:hover{
+    background-color: white;
+    border-radius: 30px;
+  }
+  header a:active{
+    color: white;
+    background-color: rgb(177, 1, 177);
+  }
+  header h1{
+    margin-left: 15px;
+  }
+    
+  article {
+    height: 60vh;
+    width: 100vw;
+    background: lightgray;
+  }
+  .autor{
+    font-weight: bold;
+    font-style:italic;
+    font-size: 0.5em;
+  }
+
+  #paisagem .imagemAutor{
+    position: relative;
+  }
+  #paisagem .imagemAutor a{
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; 
+    background-color: rgba(255, 255, 255, 0.26);
+    padding-left: 8px;
+    padding-right: 8px;
+    color: black;
+    border-radius: 20px; 
+    text-decoration: none;
+    font-size: 0.6em;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+  #paisagem .imagemAutor a:hover{
+    background-color: white;
+  }
+  #paisagem .imagemAutor img{
+    width:100vw;
+    height: auto;
+  }
+    #paisagem{
+    margin-top: 325px;
+    margin-bottom: 325px;
+  }
+
+  #capitais{
+    padding: 8px;
+    display: flex;               
+    flex-direction: row;       
+    flex-wrap: wrap;           
+    justify-content: space-around; 
+    align-items: flex-start;    
+    gap: 20px;                 
+  }
+
+#capitais section {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  border-radius: 25px;
+  max-width: 235px;
+  width: 100%;
+  max-height: 75px;
+  height: 100%;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+#capitais section img {
+    width: 100px;
+    height: auto; 
+    margin-right: 10px; 
+    overflow: hidden;
+    border-top-left-radius: 25px; 
+    border-bottom-left-radius: 25px; 
+}
+
+#capitais section div {
+    font-size: 0.5em; 
+    margin-right: 35px;
+    margin-top: 23px;
+}
+
+p {font-family: "Times New Roman", times, serif;}
+
+h2{
+  color: #4733e1;
+  font-size: 24px;
+  border-bottom: 2px solid #4733e1;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+body{
+  background-color: lightgray;
+}
+
+footer{
+  background-color: #4733e1;
+  padding: 4px;
+}
+footer p{
+  text-align: center;
+  color: white;
+}
+
+#poema, #capitais {
+  background-image: url("images/parallex.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#poema p{
+  color: white;
+}
+
+.video{
+  position: relative;
+}
+
+.video pre{
+  position: absolute; 
+  text-align: center; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: white; 
+  font-size: 2em;
+}
+
+.video video{
+  width: 100vw;
+  height: auto;
+}
+
+#galeria{
+  padding: 8px;
+  display: flex;               
+  flex-direction: row;       
+  flex-wrap: wrap;           
+  justify-content: space-around; 
+  align-items: flex-start;    
+  gap: 20px;                 
+}
+
+#galeria section {
+display: flex;
+background-color: white;
+justify-content: space-between;
+border-radius: 25px;
+max-width: 235px;
+width: 100%;
+max-height: 75px;
+height: 100%;
+margin-left: 200px;
+margin-right: 200px;
+}
+
+#galeria section img {
+  width: 100px;
+  height: auto; 
+  margin-right: 10px; 
+  overflow: hidden;
+  border-top-left-radius: 25px; 
+  border-bottom-left-radius: 25px; 
+}
+
+#galeria section div {
+  font-size: 0.5em; 
+  margin-right: 35px;
+  margin-top: 23px;
+}
+
+#galeria section:nth-child(3n+1):hover {
+  transform: scale(1.5, 2); 
+}
+
+#galeria section:nth-child(3n+2):hover {
+  transform: scale(2, 3); 
+}
+
+#galeria section:nth-child(3n):hover {
+  transform: scale(2.5, 4); 
+}
+
+
+
