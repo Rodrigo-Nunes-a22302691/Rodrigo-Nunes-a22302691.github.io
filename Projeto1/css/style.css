@@ -1,0 +1,177 @@
+/* Remover o padding e margin do browser */
+*{
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+
+
+/* animacoes */
+@keyframes slideDown{
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+
+/* Body */
+body{
+    background-color: lightgray;
+}
+
+
+/* Header */
+header{
+    position: sticky;
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+header h1{
+    text-align: center;
+
+    background-color: #4733e1;
+    color: white;
+
+    padding: 20px;
+}
+
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-around;
+
+    background-color: white;
+
+    padding: 10px;
+
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav a:visited{
+    color: rgb(177, 1, 177);
+}
+nav a:hover{
+    background-color: #4733e1;
+    color: white;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 15px;
+
+    transform: scale(1.4, 1.4);
+}
+nav a:active{
+    color: white;
+    background-color: rgb(177, 1, 177);
+}
+
+
+/* Main */
+main{
+    background-image: url();
+}
+main img{
+    width: 30vw;
+    height: auto;
+
+    margin: 20px;
+}
+main p{
+    margin-bottom: 16px;
+}
+
+/* Classes/ids */
+main .topics h3{
+    border-bottom: 2px solid #4733e1;
+    color: #4733e1;
+
+    font-size: 2em;
+
+    margin-bottom: 12px;
+}
+main .topics ul{
+    padding-left: 20px;
+}
+main .topics li{
+    margin-bottom: 12px;
+}
+main .mapa iframe
+{
+    width: 100vw;
+    height: 35vh;
+}
+main .centralizarIframe iframe{
+    display: block; 
+    margin: 0 auto;
+}
+main .topics table{
+    font-size: 2.5em;
+}
+main .alinhar{
+    display: flex;
+    justify-content: space-around;
+}
+main .alinhar a{
+    text-decoration: none;
+    color: black;
+}
+main .alinhar a:visited{
+    color: rgb(177, 1, 177);
+}
+main .alinhar a:hover{
+    background-color: #4733e1;
+    color: white;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 15px;
+
+    transform: scale(1.4, 1.4);
+}
+main .alinhar a:active{
+    color: white;
+    background-color: rgb(177, 1, 177);
+}
+
+
+/* footer */
+footer{
+    text-align: center;
+
+    background-color: #4733e1;
+
+    padding: 5px;
+}
+footer p{
+    color: white;
+}
+
+
+/* Multimedia */
+#fotografias img{
+    width: auto;
+    height: auto;
+    cursor: zoom-in;
+}
+#fotografias p{
+    display: flex;
+    justify-content: space-around;
+}
+#poema{
+    text-align: center;
+}
+#poema h4{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+#poema pre{
+    font-size: 1.4em;
+}

@@ -30,7 +30,13 @@
     }
 
     nav a{
+        font-size: 0.7em;
+
         margin-left: 4px;
         margin-right: 4px;
+    }
+
+    main img{
+        margin: 0px;
     }
 }
