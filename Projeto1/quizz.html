@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<!-- body -->
+<body>
+
+    <!-- header -->
+    <header>
+        <h1> Porto </h1>
+    </header>
+
+    <!-- nav -->
+    <nav>
+        <a href="index.html"><i class="material-icons">home</i> Home</a>
+        <a href="local.html"><i class="material-icons">place</i> Localização</a>
+        <a href="multimedia.html"><i class="material-icons">photo_library</i> Multimédia</a>
+        <a href="info.html"><i class="material-icons">info</i> Informação</a>
+        <a href="quizz.html"><i class="material-icons">quiz</i> Quizz</a>
+        <a href="viagem.html"><i class="material-icons">flight</i> Viagem</a>
+        <a href="pontosDeInteresse.html"><i class="material-icons">star</i>P.D.I</a>
+        <a href="capitais.html"><i class="material-icons">public</i> Capitais</a>
+    </nav>
+
+    <main>
+
+        <!-- Imagens alinhadas -->
+        <div class="alinhar">
+            <img src="imagens/Principais/porto1_grande.jpg" alt="Cidade do porto"> 
+            <img src="imagens/Principais/porto2_grande.jpg" alt="Cidade do porto">
+            <img src="imagens/Principais/porto3_grande.jpg" alt="Cidade do porto"> 
+        </div>
+
+        <!-- Topicos -->
+        <div class = "topics">
+                <!-- Dados utilizador -->
+                <form method="get" action="https://postman-echo.com/get" id="quizz">
+                    <h3>Dados pessoais</h3>
+                    <fieldset>
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome" autocomplete="on" maxlength="14" placeholder="Exemplo: Rodrigo" autofocus required form="quizz">  
+
+                        <label for="apelido">Apelido: </label>
+                        <input type="text" name="apelido" id="apelido" autocomplete="on" maxlength="14" size="18" placeholder="Exemplo: Nunes" required form="quizz">
+            
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" autocomplete="on" placeholder="Exemplo: RodrigoNunes@gmail.com" required form="quizz">
+                    </fieldset>
+            
+                    <!-- Quizz -->
+                    <h3>Quizz</h3>
+                    <fieldset>
+                        <h4>Perguntas múltiplas</h4>
+            
+                        <!-- 1 -->
+                        <fieldset>
+                            <p>Qual é o nome da famosa ponte que conecta o Porto a Vila Nova de Gaia?</p>
+                            <label for="perguntaMultiplaPonte1">A) Ponte da Arrábida</label>
+                            <input type="radio" name="perguntaPonte" id="perguntaMultiplaPonte1" form="quizz">
+            
+                            <label for="perguntaMultiplaPonte2">B) Ponte D. Luís I</label>
+                            <input type="radio" name="perguntaPonte" id="perguntaMultiplaPonte2" form="quizz">
+            
+                            <label for="perguntaMultiplaPonte3">C) Ponte do Infante</label>
+                            <input type="radio" name="perguntaPonte" id="perguntaMultiplaPonte3" form="quizz">
+            
+                            <label for="perguntaMultiplaPonte4">D) Ponte do Freixo</label>
+                            <input type="radio" name="perguntaPonte" id="perguntaMultiplaPonte4" form="quizz">
+                        </fieldset>
+            
+                        <!-- 2 -->
+                        <fieldset>
+                            <p>O vinho do Porto é conhecido mundialmente. Em qual região do Porto ele é tradicionalmente armazenado?</p>
+                            <label for="perguntaMultiplaVinhoPorto1">A) Ribeira</label>
+                            <input type="radio" name="perguntaVinho" id="perguntaMultiplaVinhoPorto1" form="quizz">
+            
+                            <label for="perguntaMultiplaVinhoPorto2">B) Gaia</label>
+                            <input type="radio" name="perguntaVinho" id="perguntaMultiplaVinhoPorto2" form="quizz">
+            
+                            <label for="perguntaMultiplaVinhoPorto3">C) Sé</label>
+                            <input type="radio" name="perguntaVinho" id="perguntaMultiplaVinhoPorto3" form="quizz">
+            
+                            <label for="perguntaMultiplaVinhoPorto4">D) Boavista</label>
+                            <input type="radio" name="perguntaVinho" id="perguntaMultiplaVinhoPorto4" form="quizz">
+                        </fieldset>
+            
+                        <!-- 3 -->
+                        <fieldset>
+                            <p>Qual destes monumentos é um dos mais icônicos da cidade do Porto?</p>
+                            <label for="perguntaMonumento1">A) Torre dos Clérigos</label>
+                            <input type="radio" name="perguntaMonumento" id="perguntaMonumento1" form="quizz">
+            
+                            <label for="perguntaMonumento2">B) Mosteiro da Batalha</label>
+                            <input type="radio" name="perguntaMonumento" id="perguntaMonumento2" form="quizz">
+            
+                            <label for="perguntaMonumento3">C) Castelo de Guimarães</label>
+                            <input type="radio" name="perguntaMonumento" id="perguntaMonumento3" form="quizz">
+            
+                            <label for="perguntaMonumento4">D) Padrão dos Descobrimentos</label>
+                            <input type="radio" name="perguntaMonumento" id="perguntaMonumento4" form="quizz">
+                        </fieldset>
+            
+                        <!-- 4 -->
+                        <fieldset>
+                            <p>Qual é o nome do famoso estádio de futebol do Futebol Clube do Porto?</p>
+                            <label for="perguntaEstadio1">A) Estádio da Luz</label>
+                            <input type="radio" name="perguntaEstadio" id="perguntaEstadio1" form="quizz">
+            
+                            <label for="perguntaEstadio2">B) Estádio do Dragão</label>
+                            <input type="radio" name="perguntaEstadio" id="perguntaEstadio2" form="quizz">
+            
+                            <label for="perguntaEstadio3">C) Estádio de Alvalade</label>
+                            <input type="radio" name="perguntaEstadio" id="perguntaEstadio3" form="quizz">
+            
+                            <label for="perguntaEstadio4">D) Estádio do Bonfim</label>
+                            <input type="radio" name="perguntaEstadio" id="perguntaEstadio4" form="quizz">
+                        </fieldset>
+            
+                        <!-- 5 -->
+                        <fieldset>
+                            <p>Qual é o tradicional prato do Porto que leva bife, queijo, presunto, linguiça, e molho picante?</p>
+                            <label for="perguntaPrato1">A) Bacalhau à Gomes de Sá</label>
+                            <input type="radio" name="perguntaPrato" id="perguntaPrato1" form="quizz">
+            
+                            <label for="perguntaPrato2">B) Caldo Verde</label>
+                            <input type="radio" name="perguntaPrato" id="perguntaPrato2" form="quizz">
+            
+                            <label for="perguntaPrato3">C) Tripas à Moda do Porto</label>
+                            <input type="radio" name="perguntaPrato" id="perguntaPrato3" form="quizz">
+            
+                            <label for="perguntaPrato4">D) Francesinha</label>
+                            <input type="radio" name="perguntaPrato" id="perguntaPrato4" form="quizz">
+                        </fieldset>
+                    </fieldset>
+            
+                    <!-- Verdadeiras ou falso -->
+                    <fieldset>
+                        <h4>Verdadeiro ou falso</h4>
+            
+                        <!-- 1 -->
+                        <fieldset>
+                            <p>A Livraria Lello, no Porto, é conhecida como uma das livrarias mais bonitas do mundo.</p>
+                            <label for="perguntaVerdadeiroFalsoLivraria1">Verdadeiro </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoLivraria" id="perguntaVerdadeiroFalsoLivraria1" form="quizz">
+            
+                            <label for="perguntaVerdadeiroFalsoLivraria0">Falso </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoLivraria" id="perguntaVerdadeiroFalsoLivraria2" form="quizz">
+                        </fieldset>
+            
+                        <!-- 2 -->
+                        <fieldset>
+                            <p>A cidade do Porto foi classificada como Patrimônio Mundial da UNESCO em 1996.</p>
+                            <label for="perguntaVerdadeiroFalsoUnesco1">Verdadeiro </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoUnesco" id="perguntaVerdadeiroFalsoUnesco1" form="quizz">
+            
+                            <label for="perguntaVerdadeiroFalsoUnesco0">Falso </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoUnesco" id="perguntaVerdadeiroFalsoUnesco2" form="quizz">
+                        </fieldset>
+            
+                        <!-- 3 -->
+                        <fieldset>
+                            <p>O Porto é a capital de Portugal.</p>
+                            <label for="perguntaVerdadeiroFalsoCapital1">Verdadeiro </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoCapital" id="perguntaVerdadeiroFalsoCapital1" form="quizz">
+            
+                            <label for="perguntaVerdadeiroFalsoCapital0">Falso </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoCapital" id="perguntaVerdadeiroFalsoCapital2" form="quizz">
+                        </fieldset>
+            
+                        <!-- 4 -->
+                        <fieldset>
+                            <p>O rio Douro atravessa a cidade do Porto.</p>
+                            <label for="perguntaVerdadeiroFalsoDouro1">Verdadeiro </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoDouro" id="perguntaVerdadeiroFalsoDouro1" form="quizz">
+            
+                            <label for="perguntaVerdadeiroFalsoDouro0">Falso </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoDouro" id="perguntaVerdadeiroFalsoDouro2" form="quizz">
+                        </fieldset>
+            
+                        <!-- 5 -->
+                        <fieldset>
+                            <p>Os azulejos são uma característica da arquitetura portuguesa, sendo muito utilizados na cidade do Porto.</p>
+                            <label for="perguntaVerdadeiroFalsoAzulejos1">Verdadeiro </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoAzulejos" id="perguntaVerdadeiroFalsoAzulejos1" form="quizz">
+            
+                            <label for="perguntaVerdadeiroFalsoAzulejos0">Falso </label>
+                            <input type="radio" name="perguntaVerdadeiroFalsoAzulejos" id="perguntaVerdadeiroFalsoAzulejos2" form="quizz">
+                        </fieldset>
+                    </fieldset>
+            
+                    <button type="submit">Submeter</button>
+                </form>
+            
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>Diw 2024</p>
+    </footer>
+
+</body>
+</html>

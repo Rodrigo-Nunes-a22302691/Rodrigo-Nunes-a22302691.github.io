@@ -140,6 +140,19 @@ main .alinhar a:active{
     color: white;
     background-color: rgb(177, 1, 177);
 }
+main section{
+    margin-bottom: 100px;
+}
+
+
+/* fieldset */
+fieldset{
+    margin: 25px;
+}
+fieldset input{
+    display: block;
+    margin-bottom: 20px;
+}
 
 
 /* footer */
