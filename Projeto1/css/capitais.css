@@ -236,7 +236,6 @@ main #galeria .foto:nth-child(12):hover{
 }
 
 
-
 /* footer */
 footer{
     text-align: center;
@@ -247,4 +246,29 @@ footer{
 }
 footer p{
     color: white;
+}
+
+
+/* footer */
+.video{
+    position: relative;
+} 
+.video pre{
+    position: absolute; 
+    text-align: center; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 2em;
+} 
+.video video{
+    width: 100vw;
+    height: auto;
+}
+.video span{
+    font-size: 1.5em;
+
+    font-style: italic;
+    color: black;
 }
