@@ -88,7 +88,7 @@ main p{
     margin-bottom: 16px;
 }
 
-/* Classes/ids */
+/* Classes/ids do main */
 main .topics h3{
     border-bottom: 2px solid #4733e1;
     color: #4733e1;
@@ -107,6 +107,16 @@ main .mapa iframe
 {
     width: 100vw;
     height: 35vh;
+}
+main .imagemTelaToda img{
+    max-width: 100vw;
+
+    width: 100vw;
+    height: auto;
+
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 main .centralizarIframe iframe{
     display: block; 
@@ -189,6 +199,7 @@ footer p{
 }
 
 
+/* Paginas especificas */
 /* Multimedia */
 #fotografias img{
     width: auto;
@@ -208,4 +219,49 @@ footer p{
 }
 #poema pre{
     font-size: 1.4em;
+}
+
+/* lab5 */
+.lab5 ul li a, ol li a{
+    text-decoration: none;
+}
+.lab5 ul li a:hover, ol li a:hover{
+    background-color: aquamarine;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
+}
+.lab5 ol{
+    list-style-type: upper-roman;
+
+    margin-left: 55px;
+}
+.lab5 ul{
+    list-style: circle;
+
+    margin-left: 20px;
+}
+.lab5 li{
+    font-size: 2em;
+}
+.lab5 li:nth-child(odd){
+    color: #100375;
+}
+.lab5 li:nth-child(even){
+    color: #4733ff;
+}
+.lab5 li:nth-child(odd) a{
+    color: #100375;
+}
+.lab5 li:nth-child(even) a{
+    color: #4733ff;
+}
+
+.lab5 tr:nth-child(odd) td:nth-child(odd){
+    color: white;
+    background-color: #4733e1;
+}
+.lab5 tr:nth-child(odd) td:nth-child(even){
+    color: white;
+    background-color: #4733ff;
 }
