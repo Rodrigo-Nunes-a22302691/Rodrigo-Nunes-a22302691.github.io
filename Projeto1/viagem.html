@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<!-- body -->
+
+<body>
+
+    <!-- header -->
+    <header>
+        <h1> Porto </h1>
+    </header>
+
+    <!-- nav -->
+    <nav>
+        <a href="index.html"><i class="material-icons">home</i> Home</a>
+        <a href="local.html"><i class="material-icons">place</i> Localização</a>
+        <a href="multimedia.html"><i class="material-icons">photo_library</i> Multimédia</a>
+        <a href="info.html"><i class="material-icons">info</i> Informação</a>
+        <a href="quizz.html"><i class="material-icons">quiz</i> Quizz</a>
+        <a href="viagem.html"><i class="material-icons">flight</i> Viagem</a>
+        <a href="pontosDeInteresse.html"><i class="material-icons">star</i>P.D.I</a>
+        <a href="capitais.html"><i class="material-icons">public</i> Capitais</a>
+    </nav>
+
+    <main>
+
+        <!-- Imagens alinhadas -->
+        <div class="alinhar">
+            <img src="imagens/Principais/porto1_grande.jpg" alt="Cidade do porto">
+            <img src="imagens/Principais/porto2_grande.jpg" alt="Cidade do porto">
+            <img src="imagens/Principais/porto3_grande.jpg" alt="Cidade do porto">
+        </div>
+
+        <div class="topics">
+
+            <form method="get" action="https://postman-echo.com/get" id="viagem">
+
+                <!-- Dados do utilizador -->
+                <h3>Dados pessoais</h3>
+                <fieldset class="fieldsetPai">
+                    <label for="nome">Nome:
+                        <input type="text" name="nome" id="nome" autocomplete="on" maxlength="14"
+                            placeholder="Exemplo: Rodrigo" autofocus required form="quizz">
+                    </label>
+
+                    <label for="apelido">Apelido:
+                        <input type="text" name="apelido" id="apelido" autocomplete="on" maxlength="14" size="18"
+                            placeholder="Exemplo: Nunes" required form="quizz">
+                    </label>
+
+                    <label for="email">Email:
+                        <input type="email" name="email" id="email" autocomplete="on"
+                            placeholder="Exemplo: RodrigoNunes@gmail.com" required form="quizz">
+                    </label>
+                </fieldset>
+
+                <!-- Viagem -->
+                <h3>Viagem</h3>
+                <fieldset class="fieldsetPai">
+                    <fieldset>
+                        <label for="dataDePartida">Data de partida:
+                            <input type="date" name="dataDePartida" id="dataDePartida" required form="viagem">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="dataDeChegada">Data de regresso:
+                            <input type="date" name="dataDeChegada" id="dataDeChegada" required form="viagem">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="numeroDePassageiros">Número de passageiros:
+                            <input type="number" name="passageiros" id="numeroDePassageiros" step="1" required
+                                form="viagem">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="transporte">Meio de transporte favorito:
+                            <input type="text" name="transporte" id="transporte"
+                                placeholder="carro, comboio, avião, entre outros" size="28" required form="viagem">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <p>Qual o serviço que deseja na sua viagem?</p>
+                        <label for="servico1">Básico
+                            <input type="radio" name="servico" id="servico1" required form="viagem">
+                        </label>
+
+                        <label for="servico2">Premium
+                            <input type="radio" name="servico" id="servico2" required form="viagem">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="pedidoEspecial">Pedidos especiais:
+                            <input type="text" name="pedidoEspecial" id="pedidoEspecial" form="viagem">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="valorGastar">Qual o valor que espera gastar por pessoa e por dia na sua viagem:
+                            <input type="number" name="valorGastar" id="valorGastar" step="1" required form="viagem">
+                        </label>
+                    </fieldset>
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>Diw 2024</p>
+    </footer>
+
+</body>
+
+</html>
