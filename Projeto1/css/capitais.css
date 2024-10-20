@@ -123,6 +123,41 @@ main .topics h3{
 
     font-size: 2em;
 }
+main .capsula{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: white;
+
+    width: 300px;
+    height: 100px;
+    border-radius: 35px;
+}
+main .capsula p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+
+    margin-right: 7px;
+}
+main .capsula img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+main .parallex{
+    background-image: url("/Projeto1/imagens/parallex.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+  
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 2;
+}
 main #poema{
     display: flex;
     flex-direction: column;
@@ -139,17 +174,20 @@ main #poema p{
 main #poema p span{
    font-style: italic;
 }
-main .parallex{
-    background-image: url("/Projeto1/imagens/parallex.jpg");
-    min-height: 500px;
-    background-attachment: fixed;
-  
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+main #capitais{
+    display: flex;
 
-    z-index: 2;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    flex-direction: row;
+}
+main #capitais .capsula{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 
