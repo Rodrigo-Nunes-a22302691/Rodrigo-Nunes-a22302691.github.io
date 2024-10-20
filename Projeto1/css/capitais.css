@@ -189,6 +189,52 @@ main #capitais .capsula{
     margin-left: 10vw;
     margin-right: 10vw;
 }
+main #galeria{
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    flex-direction: row;
+}
+main #galeria .foto{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+/*  Translate */
+main #galeria .foto:nth-child(1):hover{
+    transform: rotate(360deg);
+    transition-duration: 5s;
+}
+main #galeria .foto:nth-child(4):hover{
+    transform: translate(50px, -100px);
+    transition-duration: 2s;
+}
+main #galeria .foto:nth-child(7):hover{
+    transform: skew(20deg, 10deg);
+    transition-duration: 2s;
+}
+main #galeria .foto:nth-child(10):hover{
+    transform: scale(2, 2);
+    transition-duration: 2s;
+}
+/*  Efeitos */
+main #galeria .foto:nth-child(3):hover{
+    opacity: 0.5;
+}
+main #galeria .foto:nth-child(6):hover{
+    transform: scaleX(-1);
+}
+main #galeria .foto:nth-child(9):hover{
+    filter: grayscale(100%);
+}
+main #galeria .foto:nth-child(12):hover{
+    filter:saturate(8);
+}
+
 
 
 /* footer */
