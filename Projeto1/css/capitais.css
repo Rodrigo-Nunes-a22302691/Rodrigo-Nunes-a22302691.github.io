@@ -1,0 +1,166 @@
+/* Remover o padding e margin do browser */
+*{
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+
+
+/* animacoes */
+@keyframes slideDown{
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+
+/* Header */
+header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #4733e1;
+
+    width: 100vw;
+
+    z-index: 1;
+
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+header h1{
+    color: white;
+
+    font-size: 2.5em;
+
+    margin-left: 20px;
+}
+
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 1.4em;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+nav a:visited{
+    color: rgb(177, 1, 177);
+}
+nav a:hover{
+    background-color: white;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 15px;
+
+    transform: scale(1.4, 1.4);
+}
+nav a:active{
+    color: white;
+    background-color: rgb(177, 1, 177);
+}
+
+
+/* body */
+body{
+    background-color: rgba(44, 128, 253, 0.534);
+}
+
+
+/* main */
+main{
+
+}
+main .imagemAutor{
+    position: relative;
+}
+main .imagemAutor img{
+    width: 100vw;
+    height: auto;
+}
+main a{
+    position: absolute;
+
+    bottom: 30px;
+    right: 60px;
+
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 1.4em;
+}
+main a:hover{
+    background-color: white;
+
+    transform: scale(1.5, 1.5);
+}
+
+
+/*  Classes/ids do main */
+main .topics h3{
+
+    border-bottom: 2px solid #4733e1;
+    color: #4733e1;
+
+    font-size: 2em;
+}
+main #poema{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 900px;
+}
+main #poema p{
+    color: white;
+
+    font-size: 2em;
+}
+main #poema p span{
+   font-style: italic;
+}
+main .parallex{
+    background-image: url("/Projeto1/imagens/parallex.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+  
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 2;
+}
+
+
+/* footer */
+footer{
+    text-align: center;
+
+    background-color: #4733e1;
+
+    padding: 5px;
+}
+footer p{
+    color: white;
+}
