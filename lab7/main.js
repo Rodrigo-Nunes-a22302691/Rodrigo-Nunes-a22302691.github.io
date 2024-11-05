@@ -80,5 +80,4 @@ const body = document.querySelector('body');
 botao.addEventListener('click', () => {
    let valor = document.querySelector('.input2').value;
    body.style.backgroundColor = valor; 
-   alert(valor);
 });

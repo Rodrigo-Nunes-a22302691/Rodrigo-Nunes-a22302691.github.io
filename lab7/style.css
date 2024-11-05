@@ -1,0 +1,274 @@
+/* Remover o padding e margin do browser */
+*{
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+
+
+/* animacoes */
+@keyframes slideDown{
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+
+/* Header */
+header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #4733e1;
+
+    width: 100vw;
+
+    z-index: 1;
+
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+header h1{
+    color: white;
+
+    font-size: 2.5em;
+
+    margin-left: 20px;
+}
+
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 1.4em;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+nav a:visited{
+    color: rgb(177, 1, 177);
+}
+nav a:hover{
+    background-color: white;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 15px;
+
+    transform: scale(1.4, 1.4);
+}
+nav a:active{
+    color: white;
+    background-color: rgb(177, 1, 177);
+}
+
+
+/* body */
+body{
+    background-color: rgba(44, 128, 253, 0.534);
+}
+
+
+/* main */
+main{
+
+}
+main .imagemAutor{
+    position: relative;
+}
+main .imagemAutor img{
+    width: 100vw;
+    height: auto;
+}
+main a{
+    position: absolute;
+
+    bottom: 30px;
+    right: 60px;
+
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 1.4em;
+}
+main a:hover{
+    background-color: white;
+
+    transform: scale(1.5, 1.5);
+}
+
+
+/*  Classes/ids do main */
+main .topics h3{
+
+    border-bottom: 2px solid #4733e1;
+    color: #4733e1;
+
+    font-size: 2em;
+}
+main .capsula{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: white;
+
+    width: 300px;
+    height: 100px;
+    border-radius: 35px;
+}
+main .capsula p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+
+    margin-right: 7px;
+}
+main .capsula img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+main .parallex{
+    background-image: url("/Projeto1/imagens/parallex.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+  
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 2;
+}
+main #poema{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 900px;
+}
+main #poema p{
+    color: white;
+
+    font-size: 2em;
+}
+main #poema p span{
+   font-style: italic;
+}
+main #capitais{
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    flex-direction: row;
+}
+main #capitais .capsula{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+main #galeria{
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    flex-direction: row;
+}
+main #galeria .foto{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+/*  Translate */
+main #galeria .foto:nth-child(1):hover{
+    transform: rotate(360deg);
+    transition-duration: 5s;
+}
+main #galeria .foto:nth-child(4):hover{
+    transform: translate(50px, -100px);
+    transition-duration: 2s;
+}
+main #galeria .foto:nth-child(7):hover{
+    transform: skew(20deg, 10deg);
+    transition-duration: 2s;
+}
+main #galeria .foto:nth-child(10):hover{
+    transform: scale(2, 2);
+    transition-duration: 2s;
+}
+/*  Efeitos */
+main #galeria .foto:nth-child(3):hover{
+    opacity: 0.5;
+}
+main #galeria .foto:nth-child(6):hover{
+    transform: scaleX(-1);
+}
+main #galeria .foto:nth-child(9):hover{
+    filter: grayscale(100%);
+}
+main #galeria .foto:nth-child(12):hover{
+    filter:saturate(8);
+}
+
+
+/* footer */
+footer{
+    text-align: center;
+
+    background-color: #4733e1;
+
+    padding: 5px;
+}
+footer p{
+    color: white;
+}
+
+
+/* footer */
+.video{
+    position: relative;
+} 
+.video pre{
+    position: absolute; 
+    text-align: center; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 2em;
+} 
+.video video{
+    width: 100vw;
+    height: auto;
+}
+.video span{
+    font-size: 1.5em;
+
+    font-style: italic;
+    color: black;
+}
