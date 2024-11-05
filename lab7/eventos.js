@@ -1,5 +1,5 @@
 //Areas da pagina
-const areas = ["#poema", "#paisagem", "#capitais", "#galeria"];
+const areas = ["#focusPoema", "#focusPaisagem", "#focusCapitais", "#focusGaleria"];
 let index = 0;
 
 //Pegar os articles
@@ -128,4 +128,26 @@ document.addEventListener('keydown', (event) => {
     else if (event.key === 'w') {
         moveArea(-1);
     }
+});
+
+
+
+
+//Poema
+const textoPoema = document.querySelector('.poemaTexto');
+
+textoPoema.addEventListener('mouseover', () => {
+    const infoText = "Poema: Viajar! Perder países!<br>Escrito em: 1934<br>Feito por: Fernando Pessoa";
+    
+    poema.querySelector('.poemaTexto').innerHTML = infoText; 
+});
+
+textoPoema.addEventListener('mouseout', () => {
+    const originalText = `Viajar! Perder países!<br>
+    Ser outro constantemente,<br>
+    Por a alma não ter raízes<br>
+    De viver de ver somente!<br>
+    <span class="autor">Fernando Pessoa</span>`;
+
+    textoPoema.innerHTML = originalText;
 });
