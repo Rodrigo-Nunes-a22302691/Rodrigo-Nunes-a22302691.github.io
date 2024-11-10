@@ -17,13 +17,13 @@
         <p class="passar"> 1 - Passa por aqui </p>
 
         <p class="pinta">2- Pinta-me!!!</p>
-        <p><button class="red"> red </button>  <button class="green"> Green </button>  <button class="blue"> Blue </button></p>
+        <p><button data-color="red" class="cor"> red </button>  <button data-color="green" class="cor"> Green </button>  <button data-color="blue" class="cor"> Blue </button></p>
 
         <p> 3 - Escreve...</p>
         <p> <input type="text" class="input"> </p>
 
         <p>4 - Escolha uma cor em inglês: 
-            <select class="cor">
+            <select class="corFundo">
                 <option value="white">White</option>
                 <option value="black">Black</option>
                 <option value="blue">Blue</option>
@@ -34,8 +34,13 @@
         <p> 5 - <button class="conta"> Conta!!! </button> <span class="number">  </span> </p>
 
         
-        <p> 6 - <input type="text" class = "nome"> <input type="number" step="1" class = "anos"> <button class = "submit"> Submeter </button></p>
-        <p class = "pessoa"></p>
+        <form>
+            <p> 6 - <input type="text" class="nome" placeholder="Nome">
+                <input type="number" step="1" class="anos" placeholder="Idade">
+                <button type="submit" class="submit">Submeter</button>
+            </p>
+        </form>
+        <p class="pessoa"></p>
 
         <p>7 - Automatic counter: <span class = "numeroAutomaticCounter"> 0 </span></p>
         

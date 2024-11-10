@@ -17,17 +17,10 @@ passar.addEventListener('mouseout', () => {
 //Pega no elemnto pinta
 const pinta = document.querySelector('.pinta');
 
-//Butoes para mduar a cor do pinta
-document.querySelector('.red').addEventListener('click', () => {
-   pinta.style.color = "red";
-});
-
-document.querySelector('.green').addEventListener('click', () => {
-   pinta.style.color = 'green';
-});
-
-document.querySelector('.blue').addEventListener('click', () => {
-   pinta.style.color = 'blue';
+document.querySelectorAll(".cor").forEach((button) => {
+   button.addEventListener("click", () => {
+      pinta.style.color = button.dataset.color;
+   });
 });
 
 
@@ -74,36 +67,46 @@ conta.addEventListener('click', () => {
 
 
 // Mudar a cor do body
-const list = document.querySelector('.cor');
-const body = document.querySelector('body');
-
-list.addEventListener('input', () => {
-   let valor = document.querySelector('.cor').value;
-   body.style.backgroundColor = valor; 
-});
+document.querySelector('.corFundo').onchange = function() {
+   document.querySelector('body').style.backgroundColor = this.value;
+}
 
 
 
 
 // Pegar no nome e nos anos para fazer print
-const pessoa = document.querySelector('.pessoa');
-const nome = document.querySelector('.nome');
-const idade = document.querySelector('.anos');
-const submeterPessoa = document.querySelector('.submit');
+document.querySelector('form').onsubmit = (e) => {
+   // Previne o recarregamento da página ao submeter o formulário
+   e.preventDefault();
 
-submeterPessoa.addEventListener("click", () => {
-   let texto = "Olá, o " + nome.value + " tem " + idade.value + "!"
-   
-   pessoa.innerHTML = "Olá, o " + nome.value + " tem " + idade.value + "!";
-})
+   // Obtém os valores dos campos de entrada
+   const nome = document.querySelector('.nome').value;
+   const anos = document.querySelector('.anos').value;
+
+   // Mostra o nome e a idade na tag <p> com a classe "pessoa"
+   document.querySelector('.pessoa').textContent = `Nome: ${nome}, Idade: ${anos}`;
+};
 
 
 
 
 //Automatic counter
-const counterAutomatico = document.querySelector('.numeroAutomaticCounter');
-let numeroCounterAutomatico = 1;
+const countElement = document.querySelector('.numeroAutomaticCounter');
+if (!localStorage.getItem('counter')) {
+   localStorage.setItem('counter', 0);
+}
 
-setInterval( () => {
-   counterAutomatico.innerHTML = numeroCounterAutomatico++;
-}, 1000);
+// count() altera e manipula o valor de counter em localStorage
+function count() {
+   let counter = parseInt(localStorage.getItem('counter')); 
+   counter++;
+   localStorage.setItem('counter', counter); 
+   countElement.textContent = counter;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+   countElement.textContent = localStorage.getItem('counter');
+});
+
+// Incrementa o contador automaticamente a cada segundo
+setInterval(count, 1000);
