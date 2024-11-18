@@ -1,0 +1,47 @@
+/* Remove a margin e padding do navegador */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+/* header */
+header{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: purple;
+}
+
+header ul{
+    display: flex;
+
+    list-style: none;
+
+    justify-content: row;
+}
+
+header a{
+    text-decoration: none;
+
+    font-size: 20px;
+
+    color: white;
+}
+
+header li{
+    display: flex;
+
+    margin: 20px;
+}
+
+header h1{
+    margin: 20px;
+
+    color: white;
+}
