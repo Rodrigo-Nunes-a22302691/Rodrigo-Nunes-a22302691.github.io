@@ -168,6 +168,10 @@ main h2{
     background-color: rgb(185, 0, 185);
 }
 
+.cesto > p, .cesto h2{
+    color: white;
+}
+
 
 
 
