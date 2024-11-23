@@ -153,6 +153,10 @@ main h2{
     margin: 25px;
 }
 
+
+
+
+/* Carinho de compras */
 .cesto
 {
     margin: 0;
@@ -172,10 +176,6 @@ main h2{
     color: white;
 }
 
-
-
-
-
 .precoCarinho{
     font-size: 24px;
 }
@@ -183,7 +183,7 @@ main h2{
 
 
 
-
+/* footer */
 footer{
     
     background-color: white;

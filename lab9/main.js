@@ -152,6 +152,7 @@ function atualizaPreco(){
 
 
 
+
 // Main dos pobres
 atualizaCesto();
 criaLocalStorage();
