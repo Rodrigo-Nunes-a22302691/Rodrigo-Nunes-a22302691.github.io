@@ -1,0 +1,240 @@
+/* Remove a margin e padding do navegador */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+/* Body */
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+
+
+
+/* Header */
+header{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: purple;
+}
+
+header ul{
+    display: flex;
+
+    list-style: none;
+
+    justify-content: row;
+}
+
+header a{
+    text-decoration: none;
+
+    font-size: 20px;
+
+    color: white;
+}
+
+header li{
+    display: flex;
+
+    margin: 20px;
+}
+
+header h1{
+    margin: 20px;
+
+    color: white;
+}
+
+
+
+
+/* Main */
+main *{
+    margin: 20px;
+}
+
+main h2{
+    text-align: center;
+}
+
+
+
+
+/* pesquisa */
+.pesquisa{
+    width: 80vw;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.pesquisa label{
+    font-size: 25px;
+}
+
+.pesquisa *{
+    margin: 0;
+}
+
+
+
+
+/* Produtos */
+.produtos, .carinho{
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.produto{
+    display: flex;
+
+    width: 600px;
+
+    padding: 15px;
+    margin: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+}
+
+.produto img{
+    width: 250px;
+    height: auto;
+}
+
+.produto h3{
+    text-align: center;
+}
+
+.produto .preco{
+    font-size: 25px;
+}
+
+.produto .descricao{
+    background-color: lightgrey;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    font-size: 20px;
+}
+
+.produto .rating{
+    font-size: 30px;
+    text-align: center;
+}
+
+.produto .rating .star{
+    color: yellow;
+    font-size: 40px;
+}
+
+.produto button{
+    border: 0;
+
+    font-size: 20px;
+
+    padding: 10px;
+
+    background-color: lightblue;
+
+    border-radius: 30px;
+}
+
+.produto button:hover{
+    background-color: white;
+
+    border: 5px solid lightblue;
+
+    transform: scale(1.4);
+}
+
+.produto *{
+    margin: 25px;
+}
+
+
+
+
+/* Carinho de compras */
+.cesto
+{
+    margin: 0;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+
+    background-color: rgb(185, 0, 185);
+}
+
+.cesto > p, .cesto h2{
+    color: white;
+    margin: 0;
+}
+
+.precoCarinho{
+    font-size: 24px;
+}
+
+
+
+
+/* footer */
+footer{
+    
+    background-color: white;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+
+
+
+/* loja */
+.loja{
+    margin: 0;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
