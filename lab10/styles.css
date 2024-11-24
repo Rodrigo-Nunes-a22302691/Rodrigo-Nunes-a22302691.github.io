@@ -17,6 +17,9 @@ body{
 
 /* Header */
 header{
+    position: fixed;
+    width: 100%;
+
     display: flex;
 
     justify-content: space-between;
@@ -75,6 +78,8 @@ main h2{
 
 /* pesquisa */
 .pesquisa{
+    margin-top: 150px;
+
     width: 80vw;
 
     display: flex;
@@ -90,6 +95,15 @@ main h2{
 
 .pesquisa label{
     font-size: 25px;
+}
+
+.pesquisa select , .pesquisa input{
+    width: 210px;
+    height: 25px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
 }
 
 .pesquisa *{
@@ -197,15 +211,74 @@ main h2{
     justify-content: center;
     align-items: center;
     
-    width: 100vw;
+    width: 100%;
 
     background-image: url(images/watercolor-2681039_1920.jpg);
 }
 
 .cesto > p, .cesto h2{
-    color: white;
+    color: black;
     margin: 0;
 }
+
+.compra{
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-direction: column;
+
+    background-color: white;
+
+    border-radius: 20px;
+}
+
+.compra p{
+    text-align: center;
+}
+
+.compra span{
+    font-size: 22px;
+}
+
+.compra #cupao{
+    width: 210px;
+    height: 25px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+}
+
+.compra #estudante{
+    transform: scale(1.5);
+}
+
+.compra button{
+    font-size: 20px;
+
+    width: 175px;
+    height: 50px;
+
+    border: 0;
+
+    font-size: 20px;
+
+    padding: 10px;
+
+    background-color: lightblue;
+
+    border-radius: 30px;
+}
+
+.compra button:hover{
+    background-color: white;
+
+    border: 5px solid lightblue;
+}
+
 
 .precoCarinho{
     font-size: 24px;

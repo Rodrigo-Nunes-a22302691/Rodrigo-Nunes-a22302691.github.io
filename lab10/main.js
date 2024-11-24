@@ -90,8 +90,12 @@ function atualizaCesto() {
 
     })
 
-    if(produtosCarinho.length == 0){
-        document.querySelector('.cesto').style.display = 'none';
+    if(!pagou){
+        if(produtosCarinho.length == 0){
+            document.querySelector('.cesto').style.display = 'none';
+        }else{
+            document.querySelector('.cesto').style.display = 'flex';
+        }
     }else{
         document.querySelector('.cesto').style.display = 'flex';
     }
@@ -115,8 +119,6 @@ function criaProdutoCesto(produto) {
     <h3> ${produto.title} </h3>
     <img src="${produto.image}" alt="Imagem de ${produto.title}">
     <p class = "preco"> Custo total: ${produto.price}€ </p>
-    <p class = "descricao"> ${produto.description} </p>
-    <p class="rating">${produto.rating.rate} / 5.0 <span class="star">★</span></p>
     <button> - Remover do cesto </button>
     `;
 
@@ -213,7 +215,6 @@ fetch('https://deisishop.pythonanywhere.com/products/').then(response => respons
     produtos = data
     criaLocalStorage();
     atualizaCesto();
-    criaLocalStorage();
     atualizaProdutos(produtos);
 
 }).catch(error => {
@@ -232,7 +233,9 @@ fetch('https://deisishop.pythonanywhere.com/categories/').then(response => respo
 });
 
 // Pagar
+let pagou = false;
 document.querySelector('.comprar').addEventListener('click', () => {
+    pagou = true;
     fetch('https://deisishop.pythonanywhere.com/buy/', {
         method: 'POST',
         headers: {
@@ -247,7 +250,10 @@ document.querySelector('.comprar').addEventListener('click', () => {
         return response.json();
     })
     .then(data => {
-        alert('Compra realizada com sucesso! Dados: ' + JSON.stringify(data));
+        document.querySelector('.dadosDeCompra').innerHTML = `
+        <p> Valor final a pagar (com eventuais descontos): ${data.totalCost} € </p>
+        <p> Referencia de pagamento: ${data.reference} </p>
+        `
     })
     .catch(error => {
         console.error('Erro ao processar a requisição:', error);
