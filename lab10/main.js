@@ -74,18 +74,27 @@ function limparStorage() {
 
 // O nó pai para os produtos
 const paiCarinho = document.querySelector('.carinho');
+let produtosCarinho = [];
 // Atualiza o carinho de compras
 function atualizaCesto() {
 
     const lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
 
     paiCarinho.innerHTML = '';
+    produtosCarinho = [];
 
     lista.forEach(produto => {
 
         paiCarinho.append(criaProdutoCesto(produto));
+        produtosCarinho.push(produto);
 
     })
+
+    if(produtosCarinho.length == 0){
+        document.querySelector('.cesto').style.display = 'none';
+    }else{
+        document.querySelector('.cesto').style.display = 'flex';
+    }
 
     atualizaPreco();
 
@@ -162,6 +171,37 @@ function opcoesFiltrar(opcoes, html) {
 
 
 
+// Faz o JSON para o API da compra
+const estudante = document.querySelector('#estudante');
+const cupao = document.querySelector('#cupao');
+function compra(){
+
+    // Vai buscar os ids do cesto
+    let products = [];
+    produtosCarinho.forEach(produto => {
+        products.push(produto.id);
+    });
+
+    const student = estudante.checked;
+
+    const coupon = cupao.value;
+
+    limparStorage();
+    produtosCarinho = [];
+
+    atualizaCesto();
+    
+    return {
+        products,
+        student,
+        coupon
+    };
+
+}
+
+
+
+
 
 
 
@@ -171,6 +211,7 @@ let produtos;
 fetch('https://deisishop.pythonanywhere.com/products/').then(response => response.json()).then(data => {
 
     produtos = data
+    criaLocalStorage();
     atualizaCesto();
     criaLocalStorage();
     atualizaProdutos(produtos);
@@ -191,16 +232,27 @@ fetch('https://deisishop.pythonanywhere.com/categories/').then(response => respo
 });
 
 // Pagar
-fetch('https://deisishop.pythonanywhere.com/buy/'), {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json', 
-    },
-    body:{
-        
-    }
-}
-
+document.querySelector('.comprar').addEventListener('click', () => {
+    fetch('https://deisishop.pythonanywhere.com/buy/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(compra()) 
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na requisição: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert('Compra realizada com sucesso! Dados: ' + JSON.stringify(data));
+    })
+    .catch(error => {
+        console.error('Erro ao processar a requisição:', error);
+    });
+});
 
 
 

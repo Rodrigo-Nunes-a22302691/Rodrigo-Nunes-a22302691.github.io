@@ -58,6 +58,10 @@ header h1{
 
 
 /* Main */
+main{
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
+}
+
 main *{
     margin: 20px;
 }
@@ -195,7 +199,7 @@ main h2{
     
     width: 100vw;
 
-    background-color: rgb(185, 0, 185);
+    background-image: url(images/watercolor-2681039_1920.jpg);
 }
 
 .cesto > p, .cesto h2{
