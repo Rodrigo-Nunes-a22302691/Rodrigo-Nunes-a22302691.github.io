@@ -8,6 +8,12 @@ function criaLocalStorage() {
 }
 
 
+// Limpa o local storage
+function limparStorage() {
+    localStorage.setItem('produtos-selecionados', JSON.stringify([]));
+}
+
+
 
 
 // O nó pai para os produtos
@@ -34,6 +40,7 @@ function criarProduto(produto) {
     let htmlProduto = document.createElement('article');
     htmlProduto.classList.add('produto');
 
+
     // Faz formataçao
     htmlProduto.innerHTML = `
     <h3> ${produto.title} </h3>
@@ -44,9 +51,11 @@ function criarProduto(produto) {
     <button> + Adicionar ao cesto </button>
     `;
 
+
     // Adiciona um listener ao butao 
     const butao = htmlProduto.querySelector('button')
     butao.addEventListener('click', () => {
+
         const lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
 
         lista.push(produto);
@@ -54,19 +63,13 @@ function criarProduto(produto) {
         localStorage.setItem('produtos-selecionados', JSON.stringify(lista));
 
         atualizaCesto();
+
     });
+
 
     // Retorna o html do produto
     return htmlProduto;
 
-}
-
-
-
-
-// Limpa o local storage
-function limparStorage() {
-    localStorage.setItem('produtos-selecionados', JSON.stringify([]));
 }
 
 
@@ -78,11 +81,15 @@ let produtosCarinho = [];
 // Atualiza o carinho de compras
 function atualizaCesto() {
 
+    // Lista com os produtos no carinho
     const lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
 
+    // Limpa os produtos do carinho cada vez que atualiza
     paiCarinho.innerHTML = '';
     produtosCarinho = [];
 
+
+    // Poe os produtos no pai
     lista.forEach(produto => {
 
         paiCarinho.append(criaProdutoCesto(produto));
@@ -90,16 +97,24 @@ function atualizaCesto() {
 
     })
 
+
+    // O carinho nao apararece se nao tiver nada no carrinho
     if(!pagou){
+
         if(produtosCarinho.length == 0){
             document.querySelector('.cesto').style.display = 'none';
         }else{
             document.querySelector('.cesto').style.display = 'flex';
         }
+
     }else{
+
         document.querySelector('.cesto').style.display = 'flex';
+
     }
 
+
+    // Atualiza o preço do carinho
     atualizaPreco();
 
 }
@@ -114,7 +129,8 @@ function criaProdutoCesto(produto) {
     let htmlProduto = document.createElement('article');
     htmlProduto.classList.add('produto');
 
-    // Faz formataçao
+
+    // Faz o html
     htmlProduto.innerHTML = `
     <h3> ${produto.title} </h3>
     <img src="${produto.image}" alt="Imagem de ${produto.title}">
@@ -122,9 +138,11 @@ function criaProdutoCesto(produto) {
     <button> - Remover do cesto </button>
     `;
 
+
     // Adiciona um listener ao butao 
     const butao = htmlProduto.querySelector('button')
     butao.addEventListener('click', () => {
+
         let lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
 
         lista = lista.filter(p => p.id != produto.id);
@@ -132,7 +150,9 @@ function criaProdutoCesto(produto) {
         localStorage.setItem('produtos-selecionados', JSON.stringify(lista));
 
         atualizaCesto();
+
     });
+
 
     // Retorna o html do produto
     return htmlProduto;
@@ -142,7 +162,7 @@ function criaProdutoCesto(produto) {
 
 
 
-// Atualiza o proço do carinho
+// Atualiza o preço do carinho
 function atualizaPreco() {
 
     const lista = JSON.parse(localStorage.getItem('produtos-selecionados'));
@@ -165,7 +185,9 @@ function atualizaPreco() {
 function opcoesFiltrar(opcoes, html) {
 
     opcoes.forEach(opcao => {
+
         html.innerHTML += `<option value = ${opcao}> ${opcao} </option>`
+
     });
 
 }
@@ -181,18 +203,24 @@ function compra(){
     // Vai buscar os ids do cesto
     let products = [];
     produtosCarinho.forEach(produto => {
+
         products.push(produto.id);
+
     });
 
-    const student = estudante.checked;
 
+    // Vai ver se tem desconto na compra
+    const student = estudante.checked;
     const coupon = cupao.value;
 
+
+    // Limpa o storage e atualiza o cesto
     limparStorage();
     produtosCarinho = [];
-
     atualizaCesto();
     
+
+    // Faz o JSON para a API
     return {
         products,
         student,
@@ -221,6 +249,7 @@ fetch('https://deisishop.pythonanywhere.com/products/').then(response => respons
     console.error('erro', error)
 });
 
+
 // Vai buscar os valores de pesquisa á API
 fetch('https://deisishop.pythonanywhere.com/categories/').then(response => response.json()).then(data => {
 
@@ -231,6 +260,7 @@ fetch('https://deisishop.pythonanywhere.com/categories/').then(response => respo
 }).catch(error => {
     console.error('erro', error)
 });
+
 
 // Pagar
 let pagou = false;
@@ -267,14 +297,17 @@ document.querySelector('.comprar').addEventListener('click', () => {
 
 
 // Listeners
+// Variaveis para a pesquisa dos produtos
 let filtro = 'todas';
 let ordem = 'Ordenar pelo preço';
 let pesquisa = '';
 function filtrar(){
 
+    // Produtos filtrados
     let produtosFiltrados = produtos;
 
     // Filtra
+    // Categoria
     if (filtro == 'todas') {
 
         produtosFiltrados = produtos;
@@ -286,27 +319,41 @@ function filtrar(){
     }
 
 
+    // Ordem
     if(ordem == 'Preço Decrescente'){
 
         produtosFiltrados = [...produtosFiltrados].sort((a, b) => b.price - a.price);
 
     }else if(ordem == 'Preço Crescente'){
+
         produtosFiltrados = [...produtosFiltrados].sort((a, b) => a.price - b.price);
+
     }else{
+
         produtosFiltrados = produtosFiltrados;
+
     }
 
 
+    // Pesquisa por texto
     if(pesquisa == ''){
+
         produtosFiltrados = produtosFiltrados;
+
     }else{
+
         produtosFiltrados = produtosFiltrados.filter(produto => produto.title == pesquisa)
+
     }
+
 
     atualizaProdutos(produtosFiltrados);
 
 }
 
+
+// Eventos para ativar o filtro
+// Filtro de categoria
 document.querySelector('#filtra').addEventListener('change', (event) => {
 
     filtro = event.target.value;
@@ -315,6 +362,8 @@ document.querySelector('#filtra').addEventListener('change', (event) => {
 
 });
 
+
+// Filtro de ordem
 document.querySelector('#ordena').addEventListener('change', (event) => {
 
     ordem = event.target.value;
@@ -323,6 +372,8 @@ document.querySelector('#ordena').addEventListener('change', (event) => {
 
 });
 
+
+// Filtro de texto
 document.querySelector('#procura').addEventListener('change', (event) => {
 
     pesquisa = event.target.value;
