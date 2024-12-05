@@ -322,11 +322,11 @@ function filtrar(){
     // Ordem
     if(ordem == 'Preço Decrescente'){
 
-        produtosFiltrados = [...produtosFiltrados].sort((a, b) => b.price - a.price);
+        produtosFiltrados = [...produtosFiltrados].sort((a, b) => b.rating.rate - a.rating.rate);
 
     }else if(ordem == 'Preço Crescente'){
 
-        produtosFiltrados = [...produtosFiltrados].sort((a, b) => a.price - b.price);
+        produtosFiltrados = [...produtosFiltrados].sort((a, b) => a.rating.rate - b.rating.rate);
 
     }else{
 
@@ -343,6 +343,19 @@ function filtrar(){
     }else{
 
         produtosFiltrados = produtosFiltrados.filter(produto => produto.title == pesquisa)
+
+        produtosFiltrados.forEach(produto => {
+
+            let listaDescriçao = produto.description.split(" ");
+
+            listaDescriçao.forEach(palavra => {
+
+                if(palavra == pesquisa){
+                    produtosFiltrados.push(produto);
+                }
+
+            })
+        });
 
     }
 
@@ -381,3 +394,24 @@ document.querySelector('#procura').addEventListener('change', (event) => {
     filtrar();
 
 });
+
+
+document.querySelector('.adicionaToda').addEventListener('click', () => {
+
+    localStorage.setItem('produtos-selecionados', JSON.stringify(produtos));
+    atualizaCesto();
+
+
+})
+
+document.querySelector('.info').addEventListener('click', () => {
+
+    let descricoes = document.querySelectorAll('.descricao');
+
+    descricoes.forEach(descricao => {
+
+        descricao.style.display = 'none';
+
+    })
+
+})
