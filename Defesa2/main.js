@@ -198,6 +198,7 @@ function opcoesFiltrar(opcoes, html) {
 // Faz o JSON para o API da compra
 const estudante = document.querySelector('#estudante');
 const cupao = document.querySelector('#cupao');
+const morada = document.querySelector('.moradaInput');
 function compra(){
 
     // Vai buscar os ids do cesto
@@ -212,6 +213,7 @@ function compra(){
     // Vai ver se tem desconto na compra
     const student = estudante.checked;
     const coupon = cupao.value;
+    const address = morada.value;
 
 
     // Limpa o storage e atualiza o cesto
@@ -223,6 +225,7 @@ function compra(){
     // Faz o JSON para a API
     return {
         products,
+        address,
         student,
         coupon
     };
@@ -283,6 +286,7 @@ document.querySelector('.comprar').addEventListener('click', () => {
         document.querySelector('.dadosDeCompra').innerHTML = `
         <p> Valor final a pagar (com eventuais descontos): ${data.totalCost} € </p>
         <p> Referencia de pagamento: ${data.reference} </p>
+        <p> Morada: ${data.address} </p>
         `
     })
     .catch(error => {
