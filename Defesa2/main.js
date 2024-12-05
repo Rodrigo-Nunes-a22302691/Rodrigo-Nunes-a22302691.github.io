@@ -286,7 +286,7 @@ document.querySelector('.comprar').addEventListener('click', () => {
         document.querySelector('.dadosDeCompra').innerHTML = `
         <p> Valor final a pagar (com eventuais descontos): ${data.totalCost} € </p>
         <p> Referencia de pagamento: ${data.reference} </p>
-        <p> Morada: ${data.address} </p>
+        <p> ${data.address} </p>
         `
     })
     .catch(error => {
@@ -346,20 +346,11 @@ function filtrar(){
 
     }else{
 
-        produtosFiltrados = produtosFiltrados.filter(produto => produto.title == pesquisa)
+        let descricao = produtosFiltrados.description.split(" ");
 
-        produtosFiltrados.forEach(produto => {
+        
 
-            let listaDescriçao = produto.description.split(" ");
-
-            listaDescriçao.forEach(palavra => {
-
-                if(palavra == pesquisa){
-                    produtosFiltrados.push(produto);
-                }
-
-            })
-        });
+        produtosFiltrados = produtosFiltrados.filter(produto => produto.title == pesquisa || produto.description == pesquisa)
 
     }
 
