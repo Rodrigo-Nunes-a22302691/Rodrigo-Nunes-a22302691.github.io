@@ -1,0 +1,317 @@
+/* Remove a margin e padding do navegador */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+/* Body */
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+
+
+
+/* Header */
+header{
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: purple;
+}
+
+header ul{
+    display: flex;
+
+    list-style: none;
+
+    justify-content: row;
+}
+
+header a{
+    text-decoration: none;
+
+    font-size: 20px;
+
+    color: white;
+}
+
+header li{
+    display: flex;
+
+    margin: 20px;
+}
+
+header h1{
+    margin: 20px;
+
+    color: white;
+}
+
+
+
+
+/* Main */
+main{
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png');
+}
+
+main *{
+    margin: 20px;
+}
+
+main h2{
+    text-align: center;
+}
+
+
+
+
+/* pesquisa */
+.pesquisa{
+    margin-top: 150px;
+
+    width: 80vw;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+.pesquisa label{
+    font-size: 25px;
+}
+
+.pesquisa select , .pesquisa input{
+    width: 210px;
+    height: 25px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+}
+
+.pesquisa *{
+    margin: 0;
+}
+
+
+
+
+/* Produtos */
+.produtos, .carinho{
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.produto{
+    display: flex;
+
+    width: 600px;
+
+    padding: 15px;
+    margin: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+}
+
+.produto img{
+    width: 250px;
+    height: auto;
+}
+
+.produto h3{
+    text-align: center;
+}
+
+.produto .preco{
+    font-size: 25px;
+}
+
+.produto .descricao{
+    background-color: lightgrey;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    font-size: 20px;
+}
+
+.produto .rating{
+    font-size: 30px;
+    text-align: center;
+}
+
+.produto .rating .star{
+    color: yellow;
+    font-size: 40px;
+}
+
+.produto button{
+    border: 0;
+
+    font-size: 20px;
+
+    padding: 10px;
+
+    background-color: lightblue;
+
+    border-radius: 30px;
+}
+
+.produto button:hover{
+    background-color: white;
+
+    border: 5px solid lightblue;
+
+    transform: scale(1.4);
+}
+
+.produto *{
+    margin: 25px;
+}
+
+
+
+
+/* Carinho de compras */
+.cesto
+{
+    margin: 0;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+
+    background-image: url(images/watercolor-2681039_1920.jpg);
+}
+
+.cesto > p, .cesto h2{
+    color: black;
+    margin: 0;
+}
+
+.compra{
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-direction: column;
+
+    background-color: white;
+
+    border-radius: 20px;
+}
+
+.compra p{
+    text-align: center;
+}
+
+.compra span{
+    font-size: 22px;
+}
+
+.compra #cupao{
+    width: 210px;
+    height: 25px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+}
+
+.compra #estudante{
+    transform: scale(1.5);
+}
+
+.compra button{
+    font-size: 20px;
+
+    width: 175px;
+    height: 50px;
+
+    border: 0;
+
+    font-size: 20px;
+
+    padding: 10px;
+
+    background-color: lightblue;
+
+    border-radius: 30px;
+}
+
+.compra button:hover{
+    background-color: white;
+
+    border: 5px solid lightblue;
+}
+
+
+.precoCarinho{
+    font-size: 24px;
+}
+
+
+
+
+/* footer */
+footer{
+    
+    background-color: white;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+
+
+
+/* loja */
+.loja{
+    margin: 0;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
