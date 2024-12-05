@@ -346,10 +346,6 @@ function filtrar(){
 
     }else{
 
-        let descricao = produtosFiltrados.description.split(" ");
-
-        
-
         produtosFiltrados = produtosFiltrados.filter(produto => produto.title == pesquisa || produto.description == pesquisa)
 
     }
